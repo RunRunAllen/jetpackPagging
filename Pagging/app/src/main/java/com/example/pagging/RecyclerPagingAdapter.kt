@@ -29,12 +29,17 @@ class RecyclerPagingAdapter :
 
     override fun onBindViewHolder(holder: BrowseCollectViewHolder, position: Int) {
         val item = getItem(position)
-        if(item==null){
-            holder.name.text="加载中。。。"
-        }else{
+        if (item == null) {
+            holder.name.text = "加载中。。。"
+        } else {
             holder.name.text = "${item?.name}${item?.age}"
         }
     }
+
+    // 修复Header /footer 混乱问题
+//    override fun registerAdapterDataObserver(observer: RecyclerView.AdapterDataObserver) {
+//        super.registerAdapterDataObserver(MyAdapterDataObserver(observer, 1, 1))
+//    }
 
 
     class BrowseCollectViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

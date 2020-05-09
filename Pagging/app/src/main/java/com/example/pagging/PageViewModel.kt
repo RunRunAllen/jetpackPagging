@@ -18,7 +18,7 @@ class PageViewModel : ViewModel() {
 //    private fun initPaging(): PagedList.Config {
 //        return PagedList.Config.Builder()
 //            .setPageSize(PAGE_SIZE)
-//            .setEnablePlaceholders(ENABLE_PLACEHOLDERS)
+//            .setEnablePlaceholders(ENABLE_PLACEHOLDERS)//占位符
 //            .setInitialLoadSizeHint(PAGE_SIZE) //首次加载的数据量
 //            .setPrefetchDistance(REDUCE_SIZE)//距离底部还有多少条数据时开始预加载
 //            .build()

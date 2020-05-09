@@ -3,7 +3,9 @@ package com.example.pagging
 import android.util.Log
 import androidx.paging.PageKeyedDataSource
 
-class PageKeyDataSource(private var dataRepository: DataRepository?) : PageKeyedDataSource<Int, Bean>() {
+//1.PageKeyedDataSource 按页加载，如请求数据时传入page页码。
+class PageKeyDataSource(private var dataRepository: DataRepository?) :
+    PageKeyedDataSource<Int, Bean>() {
 
     override fun loadInitial(
         params: LoadInitialParams<Int?>,

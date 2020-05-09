@@ -18,11 +18,8 @@ class MainActivity : AppCompatActivity() {
             this
             , ViewModelProvider.NewInstanceFactory()
         ).get(PageViewModel::class.java)
-        viewModel.liveData.observe(this, object : Observer<PagedList<Bean>> {
-            override fun onChanged(list: PagedList<Bean>?) {
-                adapter.submitList(list)
-            }
+        viewModel.liveData.observe(this,
+            Observer<PagedList<Bean>> { list -> adapter.submitList(list) })
 
-        })
     }
 }
