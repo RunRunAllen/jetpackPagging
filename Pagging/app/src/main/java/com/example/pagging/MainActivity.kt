@@ -21,5 +21,7 @@ class MainActivity : AppCompatActivity() {
         viewModel.liveData.observe(this,
             Observer<PagedList<Bean>> { list -> adapter.submitList(list) })
 
+       // adapter.currentList?.dataSource?.invalidate()
+
     }
 }

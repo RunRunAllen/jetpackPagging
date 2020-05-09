@@ -24,5 +24,5 @@ class PageViewModel : ViewModel() {
 //            .build()
 //    }
 
-    val liveData = LivePagedListBuilder<Int, Bean>(MyDataSourceFactory(), 10).build()
+    val liveData = LivePagedListBuilder<Int, Bean>(MyDataSourceFactory(), 1).build()
 }
